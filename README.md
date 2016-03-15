@@ -13,6 +13,8 @@ $collection = [
 ];
 ```
 
+## Class or interface name filter
+
 ```php
 foreach ($collection as ClassName $val) {
 }
@@ -26,6 +28,8 @@ foreach ($collection as $val) {
   }
 }
 ```
+
+## Scalar type filter
 
 ```php
 foreach ($collection as int $val) {
@@ -49,8 +53,10 @@ foreach ($collection as $val) {
 }
 ```
 
+## Key type filter
+
 ```php
-foreach ($collection as $key => ClassName $val) {
+foreach ($collection as int $key => $val) {
 }
 ```
 
@@ -58,6 +64,15 @@ foreach ($collection as $key => ClassName $val) {
 foreach ($collection as int $key => ClassName $val) {
 }
 ```
+
+## Support for union types
+
+```php
+foreach ($collection as ClassName|int $val) {
+}
+```
+
+## With unpacking
 
 ```php
 foreach ($collection as array list($a, $v)) {
